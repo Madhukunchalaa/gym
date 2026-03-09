@@ -321,34 +321,89 @@ section {
     background: rgba(212, 175, 55, 0.05);
 }
 
-/* Schedule */
-.schedule-table {
-    border-collapse: separate;
-    border-spacing: 0 10px;
+/* Schedule Cards (The Blueprint) */
+.blueprint-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.schedule-table tr {
-    background: #1a1a1a !important;
-    transition: 0.3s;
-    border-bottom: 5px solid var(--onyx); /* Gap effect */
+.blueprint-card {
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    border: 1px solid var(--glass-border);
+    padding: 2.5rem;
+    position: relative;
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
 }
 
-.schedule-table td {
-    padding: 25px !important;
-    border: none !important;
-    color: var(--text-white) !important;
-    vertical-align: middle;
+.blueprint-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary);
+    transform: translateY(100%);
+    transition: 0.5s;
 }
 
-.schedule-table tr:hover {
-    transform: translateX(10px);
-    background: #252525 !important;
-    border-left: 4px solid var(--primary);
+.blueprint-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
-.time-slot {
+.blueprint-card:hover::before {
+    transform: translateY(0);
+}
+
+.blueprint-time {
+    font-size: 0.8rem;
     color: var(--primary);
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.blueprint-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.blueprint-coach {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.blueprint-status {
+    font-size: 0.7rem;
+    font-weight: 900;
+    padding: 5px 15px;
+    border: 1px solid var(--primary);
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.blueprint-status.full {
+    background: var(--primary);
+    color: black;
+}
+
+/* Arsenal & Evolution Refinements */
+.section-accent-text {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: block;
 }
 
 /* BMI Rebuild */
