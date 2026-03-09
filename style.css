@@ -231,6 +231,74 @@ section {
     background: linear-gradient(transparent, var(--onyx));
 }
 
+/* Transformations */
+.transformation-card {
+    background: var(--charcoal);
+    border: 1px solid var(--glass-border);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.transformation-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: grayscale(1);
+    transition: 0.5s;
+}
+
+.transformation-card:hover img {
+    filter: grayscale(0);
+    transform: scale(1.02);
+}
+
+/* Fuel Station */
+.fuel-section {
+    background: linear-gradient(rgba(5,5,5,0.9), rgba(5,5,5,0.9)), url('images/fuel.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.fuel-item {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 2rem;
+    transition: 0.3s;
+}
+
+.fuel-item:hover {
+    border-color: var(--primary);
+    background: rgba(212, 175, 55, 0.05);
+}
+
+/* Schedule */
+.schedule-table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.schedule-table tr {
+    background: var(--charcoal);
+    transition: 0.3s;
+}
+
+.schedule-table tr:hover {
+    transform: translateX(10px);
+    background: var(--onyx);
+    border-left: 4px solid var(--primary);
+}
+
+.schedule-table td {
+    padding: 20px;
+    border: none;
+    color: var(--text-white);
+}
+
+.time-slot {
+    color: var(--primary);
+    font-weight: 700;
+}
+
 /* BMI Rebuild */
 .bmi-luxury {
     background: linear-gradient(rgba(5,5,5,0.9), rgba(5,5,5,0.9)), url('images/equipment.png');
