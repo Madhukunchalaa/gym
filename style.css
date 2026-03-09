@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@700;900&display=swap');
 
 :root {
-    --gold: #D4AF37;
-    --gold-glow: rgba(212, 175, 55, 0.3);
-    --onyx: #050505;
-    --charcoal: #121212;
-    --text-white: #f5f5f5;
-    --text-muted: #888888;
-    --glass: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    --primary: #00F2FF; /* Neon Cyan */
+    --primary-glow: rgba(0, 242, 255, 0.4);
+    --onyx: #020617; /* Deep Midnight Navy */
+    --steel: #CBD5E1;
+    --text-white: #f8fafc;
+    --text-muted: #64748b;
+    --glass: rgba(255, 255, 255, 0.01);
+    --glass-border: rgba(0, 242, 255, 0.1);
 }
 
 * {
@@ -63,7 +63,7 @@ h1, h2, h3, h4, .navbar-brand {
 }
 
 .navbar-brand span {
-    color: var(--gold);
+    color: var(--primary);
 }
 
 .nav-link {
@@ -78,7 +78,7 @@ h1, h2, h3, h4, .navbar-brand {
 
 .nav-link:hover {
     opacity: 1;
-    color: var(--gold) !important;
+    color: var(--primary) !important;
 }
 
 /* Hero Section */
@@ -111,14 +111,14 @@ h1, h2, h3, h4, .navbar-brand {
 }
 
 .hero-content .gold-text {
-    color: var(--gold);
-    text-shadow: 0 0 20px var(--gold-glow);
+    color: var(--primary);
+    text-shadow: 0 0 30px var(--primary-glow);
 }
 
 .btn-gold {
-    background: var(--gold);
-    color: var(--onyx);
-    font-weight: 700;
+    background: var(--primary);
+    color: white;
+    font-weight: 800;
     padding: 1.2rem 3rem;
     border-radius: 0;
     border: none;
@@ -129,8 +129,9 @@ h1, h2, h3, h4, .navbar-brand {
 
 .btn-gold:hover {
     background: #fff;
+    color: var(--onyx);
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px var(--gold-glow);
+    box-shadow: 0 10px 30px var(--primary-glow);
 }
 
 /* Sections General */
@@ -159,7 +160,7 @@ section {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: var(--gold);
+    background: var(--primary);
 }
 
 /* Feature Cards */
@@ -190,8 +191,9 @@ section {
 }
 
 .feature-card:hover {
-    border-color: var(--gold);
+    border-color: var(--primary);
     transform: translateY(-10px);
+    box-shadow: 0 0 20px var(--primary-glow);
 }
 
 .feature-card:hover img {
@@ -211,11 +213,12 @@ section {
 }
 
 .bmi-glass-card {
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(15px);
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     padding: 4rem;
     position: relative;
+    box-shadow: inset 0 0 20px rgba(0, 242, 255, 0.05);
 }
 
 .bmi-input-group {
@@ -224,7 +227,7 @@ section {
 
 .bmi-input-group label {
     font-size: 0.8rem;
-    color: var(--gold);
+    color: var(--primary);
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -267,12 +270,12 @@ section {
 
 .gauge-fill {
     fill: none;
-    stroke: var(--gold);
-    stroke-width: 10;
+    stroke: var(--primary);
+    stroke-width: 12;
     stroke-dasharray: 628; /* 2 * PI * 100 */
     stroke-dashoffset: 628;
     transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-    stroke-linecap: round;
+    stroke-linecap: square;
 }
 
 .gauge-content {
@@ -286,15 +289,15 @@ section {
 .bmi-score-big {
     font-size: 4rem;
     font-weight: 900;
-    color: var(--gold);
+    color: var(--primary);
     line-height: 1;
 }
 
 .bmi-status-badge {
     display: inline-block;
     padding: 5px 20px;
-    background: var(--gold);
-    color: black;
+    background: var(--primary);
+    color: white;
     font-weight: 800;
     font-size: 0.8rem;
     margin-top: 10px;
@@ -314,10 +317,10 @@ section {
 }
 
 .price-card-lux.featured {
-    background: var(--onyx);
-    border-color: var(--gold);
+    background: rgba(15, 23, 42, 0.8);
+    border-color: var(--primary);
     transform: scale(1.05);
-    box-shadow: 0 0 50px rgba(212, 175, 55, 0.1);
+    box-shadow: 0 0 50px rgba(0, 242, 255, 0.2);
 }
 
 .price-lux {
