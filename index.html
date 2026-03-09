@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V FIT | Luxury Performance Club</title>
+    <meta name="description" content="Experience high-end fitness with V FIT. Elite coaching, charcoal & gold luxury theme.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">V <span>FIT</span></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <div style="width: 30px; height: 2px; background: white; margin-bottom: 5px;"></div>
+                <div style="width: 20px; height: 2px; background: white;"></div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">SERVICES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bmi">ATHLETE PROFILE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#membership">MEMBERSHIP</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content reveal">
+                <span class="text-gold fw-bold mb-3 d-block letter-spacing-3">PEAK PERFORMANCE HUB</span>
+                <h1>DOMINATE YOUR <br><span class="gold-text">HYPERTROPHY</span></h1>
+                <p class="lead col-lg-6 text-white-50 mb-5">Master the art of progressive overload in a sanctuary engineered for elite biomechanics. V FIT is where data-driven training meets high-end luxury.</p>
+                <a href="#membership" class="btn btn-gold">Inquire Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>ELITE SERVICES</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 reveal">
+                    <div class="feature-card">
+                        <img src="images/trainer.png" alt="Personal Training">
+                        <div class="feature-body">
+                            <h3 class="h4">Biomechanical Mastery</h3>
+                            <p class="small text-white-50">Precision coaching focused on movement efficiency and neuromuscular adaptation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="feature-card">
+                        <img src="images/hiit.png" alt="HIIT">
+                        <div class="feature-body">
+                            <h3 class="h4">Metabolic Conditioning</h3>
+                            <p class="small text-white-50">Science-backed VO2 max optimization and EPOC-driven fat oxidation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="feature-card">
+                        <img src="images/yoga.png" alt="Yoga">
+                        <div class="feature-body">
+                            <h3 class="h4">Neural Restoration</h3>
+                            <p class="small text-white-50">Active recovery protocols to downregulate the nervous system and enhance protein synthesis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BMI Section Rebuilt -->
+    <section id="bmi" class="bmi-luxury">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal">
+                    <h2 class="display-3 fw-bold mb-4">THE BIOMETRIC <br><span class="gold-text">ASSESSMENT</span></h2>
+                    <p class="text-white-50 mb-5">Our elite athletes start with data. Calculate your Index and unlock a personalized blueprint for your evolution.</p>
+                    
+                    <div class="bmi-glass-card shadow-lg">
+                        <form id="bmiFormLux">
+                            <div class="bmi-input-group">
+                                <label>Height in Centimeters</label>
+                                <input type="number" id="h" placeholder="000" required>
+                            </div>
+                            <div class="bmi-input-group">
+                                <label>Weight in Kilograms</label>
+                                <input type="number" id="w" placeholder="00" required>
+                            </div>
+                            <button type="submit" class="btn btn-gold w-100 py-3 mt-4">Generate Report</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 text-center reveal">
+                    <div id="gaugePlaceholder" class="p-5">
+                        <div class="border border-secondary p-5 opacity-25">
+                            <p>AWAITING CORE DATA INPUT</p>
+                        </div>
+                    </div>
+                    
+                    <div id="gaugeResult" class="d-none">
+                        <div class="gauge-container mb-4">
+                            <svg class="gauge-svg" viewBox="0 0 220 220">
+                                <circle class="gauge-bg" cx="110" cy="110" r="100"></circle>
+                                <circle id="gaugeProgress" class="gauge-fill" cx="110" cy="110" r="100"></circle>
+                            </svg>
+                            <div class="gauge-content">
+                                <div id="bmiValLux" class="bmi-score-big">00.0</div>
+                                <div id="bmiLabelLux" class="bmi-status-badge">ASSESSING</div>
+                            </div>
+                        </div>
+                        <h3 id="bmiVerdict" class="text-gold mt-4 fw-bold"></h3>
+                        <p id="bmiAdvice" class="lead text-white-50 px-lg-5"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership -->
+    <section id="membership" class="pricing-luxury">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>THE MEMBERSHIP</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-5 reveal">
+                    <div class="price-card-lux">
+                        <h3 class="mb-4">Onyx Tier</h3>
+                        <p class="text-muted">Unlimited access to heavy-duty platforms and isolation modules.</p>
+                        <div class="price-lux">$199<span>/mo</span></div>
+                        <button class="btn btn-outline-light w-100 rounded-0 py-3">Start Bulk Phase</button>
+                    </div>
+                </div>
+                <div class="col-lg-5 reveal">
+                    <div class="price-card-lux featured">
+                        <div class="badge bg-warning text-dark mb-3">MAXIMUM GAINS</div>
+                        <h3 class="mb-4">Gold Physique</h3>
+                        <p class="text-muted">Full macros concierge & hormone-optimization consulting.</p>
+                        <div class="price-lux">$399<span>/mo</span></div>
+                        <button class="btn btn-gold w-100 py-3">Claim Apex Status</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 border-top border-secondary text-center">
+        <div class="container">
+            <h2 class="navbar-brand mb-4">V <span>FIT</span></h2>
+            <p class="text-white-50 mb-0">© 2026 V FIT LUXURY PERFORMANCE CLUB. EXCELLENCE IS NON-NEGOTIABLE.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.navbar');
+            window.scrollY > 50 ? nav.classList.add('scrolled') : nav.classList.remove('scrolled');
+        });
+
+        // Intersection Observer for Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('reveal');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // BMI Logic Lux
+        document.getElementById('bmiFormLux').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const h = parseFloat(document.getElementById('h').value) / 100;
+            const w = parseFloat(document.getElementById('w').value);
+            const bmi = (w / (h * h)).toFixed(1);
+
+            document.getElementById('gaugePlaceholder').classList.add('d-none');
+            document.getElementById('gaugeResult').classList.remove('d-none');
+
+            // Score animation
+            const scoreEl = document.getElementById('bmiValLux');
+            scoreEl.innerText = bmi;
+
+            // Gauge animation
+            // Max gauge is 40. 
+            const maxBmi = 40;
+            const percentage = Math.min(bmi / maxBmi, 1);
+            const offset = 628 - (628 * percentage);
+            document.getElementById('gaugeProgress').style.strokeDashoffset = offset;
+
+            // Content logic
+            let verdict = '';
+            let advice = '';
+            let color = '#D4AF37';
+
+            if (bmi < 18.5) {
+                verdict = 'UNDERWEIGHT | SURPLUS NEEDED';
+                advice = 'Unlock elite mass-building protocols and metabolic conditioning to reach your peak potential.';
+                color = '#A0A0A0';
+            } else if (bmi < 25) {
+                verdict = 'OPTIMAL | ATHLETE STATUS';
+                advice = 'You are in the functional sweet spot. Focus on advanced strength & explosive power to stay ahead.';
+                color = '#D4AF37';
+            } else if (bmi < 30) {
+                verdict = 'OVERWEIGHT | SHRED PROTOCOL';
+                advice = 'Initiate our specialized HIIT and nutrition concierge to incinerate fat while preserving muscle.';
+                color = '#fd7e14';
+            } else {
+                verdict = 'OBESE | RECONSTRUCTION';
+                advice = 'A complete structural overhaul is required. Our coaches will build your foundation from the ground up.';
+                color = '#dc3545';
+            }
+
+            document.getElementById('bmiLabelLux').innerText = verdict.split('|')[0].trim();
+            document.getElementById('bmiVerdict').innerText = verdict;
+            document.getElementById('bmiAdvice').innerText = advice;
+            document.getElementById('gaugeProgress').style.stroke = color;
+            scoreEl.style.color = color;
+        });
+    </script>
+</body>
+</html>
