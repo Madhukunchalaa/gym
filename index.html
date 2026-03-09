@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -77,6 +79,56 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Arsenal: Elite Equipment Showcase -->
+    <section id="arsenal" class="bg-charcoal">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>THE ARSENAL</h2>
+                <p class="text-white-50 mt-3">Precision-engineered tools for elite results.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-8 reveal">
+                    <div class="arsenal-card">
+                        <img src="images/equipment.png" alt="Eleiko Platforms" class="arsenal-image">
+                        <div class="equipment-icon-overlay float-item">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div class="p-5 position-absolute bottom-0 start-0">
+                            <h3 class="display-5 fw-bold mb-2">OLYMPIC PLATFORMS</h3>
+                            <p class="lead text-gold">ELEIKO ® CHROME SERIES</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex flex-column gap-4">
+                    <div class="feature-card reveal" style="height: 50%;">
+                        <div class="p-4">
+                            <h4 class="text-gold mb-3">ISO-LATERAL TECH</h4>
+                            <p class="small text-white-50">Hammer Strength® precise movement paths for maximum muscle fiber recruitment.</p>
+                            <div class="text-end mt-4">
+                                <span class="pulse-target d-inline-block rounded-circle p-2" style="background: var(--primary);"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-card reveal" style="height: 50%;">
+                        <div class="p-4">
+                            <h4 class="text-gold mb-3">SMART RECOVERY</h4>
+                            <p class="small text-white-50">Integrated bio-sensors on all cardiovascular modules for real-time VO2 tracking.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Floating Background Elements -->
+            <div class="gym-icon-bg float-item" style="top: 10%; left: 5%;">
+                <svg width="200" height="200" viewBox="0 0 24 24" fill="currentColor"><path d="M5,5H7V19H5V5M17,5H19V19H17V5M9,11H15V13H9V11Z"/></svg>
+            </div>
+            <div class="gym-icon-bg float-item" style="bottom: 15%; right: 10%; animation-delay: -3s;">
+                <svg width="150" height="150" viewBox="0 0 24 24" fill="currentColor"><path d="M22,12C22,17.5 17.5,22 12,22C6.5,22 2,17.5 2,12C2,6.5 6.5,2 12,2C17.5,2 22,6.5 22,12M18,12C18,11.4 17.6,11 17,11H7C6.4,11 6,11.4 6,12C6,12.6 6.4,13 7,13H17C17.6,13 18,12.6 18,12Z"/></svg>
             </div>
         </div>
     </section>
@@ -177,7 +229,9 @@
         // Intersection Observer for Reveal
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('reveal');
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
             });
         }, { threshold: 0.1 });
 
